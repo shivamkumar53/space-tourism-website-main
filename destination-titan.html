@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Frontend Mentor | Space tourism website</title>
+  <link rel="stylesheet" href="destination.css">
+</head>
+<body>
+  <main class="flex align-items">
+    <header>
+      <nav class="navbar flex align-items justify-content">
+        <div class="logo"><img src="assets/shared/logo.svg" alt=""></div>
+        <div onclick="toggle()" class="menu-bar-div"><i class="fa-solid fa-bars"></i></div>
+        <ul class="nav-item flex align-items justify-content">
+          <div onclick="toggleHidden()" class="disable-menu"><i class="fa-regular fa-circle-xmark"></i></div>
+          <li class="nav-links flex justify-content align-items">
+            <span>00</span>
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>01</span>
+            <a href="destination-moon.html">Destination</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>02</span>
+            <a href="crew-commander.html">Crew</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>03</span>
+            <a href="technology-vehicle.html">Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="flex">
+      <div class="title-div flex ">
+        <span>01</span>
+        <h3>Pick Your Destination</h3>
+      </div>
+
+      <div class="moon-container-navlinks-and-some-description flex">
+        <div class="moon-img-container">
+          <img src="assets/destination/image-titan.png" alt="Titan Image">
+        </div>
+
+        <div class="navlinks-moon-description">
+          <ul class="nav-items flex">
+            <li class="nav-links"><a href="destination-moon.html">Moon</a></li>
+            <li class="nav-links"> <a href="destination-mars.html">Mars</a></li>
+            <li class="nav-links"><a href="destination-europa.html">Europa</a></li>
+            <li class="nav-links secactive"><a href="destination-titan.html">Titan</a></li>
+          </ul>
+
+          <h1>Titan</h1>
+          <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+
+          <div class="hr"></div>
+          <div class="avg-distance-time-parent flex">
+            <div class="avg-distance">
+              <p>Avg. Distance</p>
+              <h5>1.6 bil. km</h5>
+            </div>
+            <div class="avg-time">
+              <p>Est. Travel Time</p>
+              <h5>7 years</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggle() {
+      let navItem = document.querySelector('.nav-item');
+      if (navItem.style.visibility === 'visible' || window.getComputedStyle(navItem).visibility === 'visible') {
+        navItem.style.visibility = 'hidden'; // Hide the item
+      } else {
+        navItem.style.visibility = 'visible'; // Show the item
+      }
+    }
+
+    function toggleHidden() {
+      let navItem = document.querySelector('.nav-item');
+      if (navItem.style.visibility === 'hidden' || window.getComputedStyle(navItem).visibility === 'hidden') {
+        navItem.style.visibility = 'visible'; // Show the item
+      } else {
+        navItem.style.visibility = 'hidden'; // Hide the item
+      }
+    }
+  </script>
+</body>
+</html>

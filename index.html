@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata Section -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Additional Font Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Page Title -->
+  <title>Frontend Mentor | Space Tourism Website</title>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="flex align-items">
+
+    <!-- Header Section -->
+    <header>
+      <nav class="navbar flex align-items">
+
+        <!-- Logo Section -->
+        <div class="logo">
+          <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div onclick="toggle()" class="menu-bar-div">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-item flex align-items justify-content">
+
+          <!-- Mobile Menu Close Button -->
+          <div onclick="toggleHidden()" class="disable-menu">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+
+          <!-- Navigation Links -->
+          <li class="nav-links flex justify-content align-items active">
+            <span>00</span>
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>01</span>
+            <a href="destination-moon.html">Destination</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>02</span>
+            <a href="crew-commander.html">Crew</a>
+          </li>
+          <li class="nav-links flex justify-content align-items">
+            <span>03</span>
+            <a href="technology-vehicle.html">Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="flex">
+
+      <!-- Text Content Section -->
+      <div class="all-text-container">
+        <h3>So, you want to travel to</h3>
+        <h1>SPACE</h1>
+        <p>Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well, sit back and relax because we'll give you a truly out-of-this-world experience!</p>
+      </div>
+
+      <!-- Explore Button Section -->
+      <div class="explore-btn-container flex">
+        <div class="Explore-circle flex justify-content align-items">
+          <h1>Explore</h1>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript Section -->
+  <script>
+    function toggle() {
+      let navItem = document.querySelector('.nav-item');
+      if (navItem.style.visibility === 'visible' || window.getComputedStyle(navItem).visibility === 'visible') {
+        navItem.style.visibility = 'hidden';
+      } else {
+        navItem.style.visibility = 'visible';
+      }
+    }
+
+    function toggleHidden() {
+      let navItem = document.querySelector('.nav-item');
+      if (navItem.style.visibility === 'hidden' || window.getComputedStyle(navItem).visibility === 'hidden') {
+        navItem.style.visibility = 'visible';
+      } else {
+        navItem.style.visibility = 'hidden';
+      }
+    }
+  </script>
+
+</body>
+</html>

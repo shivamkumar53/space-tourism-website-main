@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="destination.css">
+
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+
+<body>
+  
+  <main class="flex align-items">
+
+    <header>
+      <nav class="navbar flex align-items justify-content">
+        <div class="logo">
+          <img src="assets/shared/logo.svg" alt="Space Tourism Logo">
+        </div>
+
+        <div class="menu-bar-div" onclick="toggle()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-item flex align-items justify-content">
+          <div class="disable-menu" onclick="toggleHidden()">
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+
+          <li class="nav-links flex justify-content align-items">
+            <span>00</span>
+            <a href="index.html">Home</a>
+          </li>
+
+          <li class="nav-links flex justify-content align-items active">
+            <span>01</span>
+            <a href="destination-moon.html">Destination</a>
+          </li>
+
+          <li class="nav-links flex justify-content align-items">
+            <span>02</span>
+            <a href="crew-commander.html">Crew</a>
+          </li>
+
+          <li class="nav-links flex justify-content align-items">
+            <span>03</span>
+            <a href="technology-vehicle.html">Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="flex">
+      <div class="title-div flex">
+        <span>01</span>
+        <h3>Pick Your Destination</h3>
+      </div>
+
+      <div class="moon-container-navlinks-and-some-description flex">
+        <div class="moon-img-container">
+          <img src="assets/destination/image-mars.png" alt="Mars Image">
+        </div>
+
+        <div class="navlinks-moon-description">
+          <ul class="nav-items flex">
+            <li class="nav-links">
+              <a href="destination-moon.html">Moon</a>
+            </li>
+            <li class="nav-links secactive">
+              <a href="destination-mars.html">Mars</a>
+            </li>
+            <li class="nav-links">
+              <a href="destination-europa.html">Europa</a>
+            </li>
+            <li class="nav-links">
+              <a href="destination-titan.html">Titan</a>
+            </li>
+          </ul>
+
+          <h1>Mars</h1>
+
+          <p>
+            Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary
+            mountain in our solar system. It’s two and a half times the size of Everest!
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="avg-distance-time-parent flex">
+            <div class="avg-distance">
+              <p>Avg. Distance</p>
+              <h5>225 mil. km</h5>
+            </div>
+
+            <div class="avg-time">
+              <p>Est. Travel Time</p>
+              <h5>9 months</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggle() {
+      let navItem = document.querySelector('.nav-item');
+      navItem.style.visibility = (navItem.style.visibility === 'visible' || window.getComputedStyle(navItem).visibility === 'visible') ? 'hidden' : 'visible';
+    }
+
+    function toggleHidden() {
+      console.log("Toggle visibility");
+      let navItem = document.querySelector('.nav-item');
+      navItem.style.visibility = (navItem.style.visibility === 'hidden' || window.getComputedStyle(navItem).visibility === 'hidden') ? 'visible' : 'hidden';
+    }
+  </script>
+</body>
+
+</html>

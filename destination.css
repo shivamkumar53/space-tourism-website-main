@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cyan Capitals';
+    src: url('fonts/CyanCapitals.woff2') format('woff2'),
+        url('fonts/CyanCapitals.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Start of utility CSS */
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+/* End of utility CSS */
+
+
+main {
+    height: 100vh;
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 100%;
+    background-image: url(assets/destination/background-destination-desktop.jpg);
+    background-size: cover;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.menu-bar-div {
+    display: none;
+}
+
+.disable-menu {
+    display: none;
+}
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 4vw;
+}
+
+.nav-item {
+    padding-left: 1%;
+    padding-right: 4%;
+    list-style: none;
+    gap: 4vw;
+    height: 6.8vw;
+    width: 55vw;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    height: 1.9px;
+    width: 60%;
+    left: -56%;
+    background-color: rgba(255, 255, 255, 0.11);
+}
+
+.nav-links {
+    position: relative;
+    height: 100%;
+}
+
+.active::after {
+    content: '';
+    position: absolute;
+    height: 0.3vw;
+    bottom: 0%;
+    width: 100%;
+    background-color: #e1dada;
+}
+
+.nav-links a {
+    color: #d9d8d8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: clamp(13px, 1vw, 1.2rem);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.nav-links span {
+    color: #fff;
+    font-weight: 500;
+    margin-right: 5px;
+    font-size: clamp(14px, 1.1vw, 1.2rem);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+section {
+    width: 80%;
+    height: 75%;
+    margin-left: -40px;
+    padding-bottom: 65px;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.title-div span {
+    color: #817b7b;
+    font-weight: 500;
+    margin-right: 10px;
+    font-size: clamp(20px, 1.5vw, 1.5vw);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.title-div h3 {
+    color: #ebdada;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(20px, 1.5vw, 1.5vw);
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+.moon-container-navlinks-and-some-description {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.moon-img-container {
+    width: 50%;
+}
+
+.moon-img-container img {
+    width: 25vw;
+}
+
+.navlinks-and-some-description {
+    width: 50%;
+}
+
+.navlinks-moon-description {
+    width: 50%;
+}
+
+.nav-items {
+    list-style: none;
+    gap: 3vw;
+    height: max-content;
+}
+
+.nav-links {
+    position: relative;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.secactive::after {
+    content: '';
+    position: absolute;
+    height: 0.2vw;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.navlinks-moon-description h1 {
+    color: #fefeff;
+    line-height: 8vw;
+    font-family: "Halant", serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: clamp(20px, 5vw, 5vw);
+}
+
+.navlinks-moon-description p{
+    color: #8f8fa7;
+    width: 78%;
+    line-height: 1.7vw;
+    font-size: clamp(15px, 1.2vw, 1.2vw);
+    font-family: "Roboto Condensed", sans-serif;
+    margin-bottom: 5%;
+}
+
+.hr{
+    width: 78%;
+    height: 0.1px;
+    background-color: rgba(255, 255, 255, 0.11);
+    margin-bottom: 5%;
+}
+
+.avg-distance-time-parent{
+    width: 78%;
+
+}
+
+.avg-distance{
+    width: 50%;
+    text-align: left;
+}
+
+.avg-distance p{
+    text-transform: uppercase;
+    font-size: clamp(14px, 1vw, 1vw);
+}
+
+.avg-distance h5{
+    color: #e5e5ec;
+    line-height: 1vw;
+    font-family: "Halant", serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: clamp(12px, 2vw, 2vw);
+}
+
+.avg-time{
+    width: 50%;
+    text-align: left;
+}
+
+.avg-time p{
+    text-transform: uppercase;
+    font-size: clamp(14px, 1vw, 1.2vw);
+}
+
+.avg-time h5{
+    color: #e5e5ec;
+    line-height: 1vw;
+    font-family: "Halant", serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: clamp(12px, 2vw, 2vw);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    main {
+        padding-top: 0px;
+        background-image: url(assets/destination/background-destination-tablet.jpg);
+    }
+
+    .nav-item {
+        padding-left: 4%;
+        padding-right: 4%;
+        gap: 4vw;
+        height: 10vh;
+        width: max-content;
+    }
+
+    .nav-item::before {
+        display: none;
+    }
+
+    .nav-links a {
+        font-size: 1.5vh;
+        letter-spacing: 3px;
+    }
+
+    .nav-links span {
+        font-size: 1.8vh;
+    }
+
+    .logo img {
+        height: 6vh;
+    }
+
+    section {
+        width: 90%;
+        height: 80%;
+        margin-left: -40px;
+        padding-bottom: 0px;
+        justify-content: center;
+        gap: 6vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-div{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .title-div h3{
+        font-size: 2.4vh;
+    }
+
+    .title-div span{
+        font-size: 2.4vh;
+    }
+
+    .moon-container-navlinks-and-some-description{
+        flex-direction: column;
+        height: 100%;
+        gap: 6vh;
+        margin-top: 0%;
+    }
+
+    .moon-img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moon-img-container img{
+        width: 32vh;
+    }
+
+    .navlinks-moon-description{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav-items{
+        gap: 6vh;
+    }
+
+    .secactive::after {
+        height: 0.3vh;
+    }
+
+    .nav-links a{
+        font-size: 2vh;
+    }
+
+    .navlinks-moon-description h1{
+        font-size: 8vh;
+        line-height: 10vh;
+    }
+
+    .navlinks-moon-description p{
+        font-size: 2vh;
+        margin-bottom: 2%;
+        line-height: 2.5vh;
+    }
+
+    .avg-distance p, .avg-time p{
+        font-size: 1.5vh;
+        margin-bottom: 5%;
+    }
+
+    .avg-distance h5, .avg-time h5{
+        font-size: 2.8vh;
+    }
+
+    .hr{
+        margin-bottom: 2%;
+    }
+
+    .avg-distance, .avg-time{
+        height: max-content;
+    }
+
+    .avg-distance-time-parent{
+        padding-left: 15%;
+    }
+
+    
+}
+
+
+@media (max-width: 767px) {
+    main {
+        padding: 25px;
+        background-image: url(assets/destination/background-destination-mobile.jpg);
+    }
+
+    .menu-bar-div {
+        display: block;
+    }
+
+    .menu-bar-div i {
+        color: #8f8fa7;
+        font-size: 30px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .nav-item {
+        visibility: hidden;
+        padding: 0px;
+        top: 0%;
+        position: absolute;
+        height: 50vh;
+        gap: 5vh;
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item::before {
+        display: none;
+    }
+
+    .nav-links {
+        width: max-content;
+        height: auto;
+    }
+
+    .disable-menu {
+        display: block;
+        position: absolute;
+        top: 4%;
+        right: 5%;
+    }
+
+    .disable-menu i {
+        color: #8f8fa7;
+        font-size: 30px;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        font-size: 2vh;
+        margin-bottom: 12%;
+        letter-spacing: 4px;
+    }
+
+    .nav-links span {
+        margin-bottom: 12%;
+        font-size: 2vh;
+    }
+
+    .active::after {
+        height: 0.3vh;
+    }
+
+
+    .logo img {
+        height: 5vh;
+    }
+
+
+    section {
+        width: 100%;
+        height: 86%;
+        margin-left: 0px;
+        padding-bottom: 0px;
+        justify-content: center;
+        gap: 6vh;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-div{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .title-div h3{
+        font-size: 2.4vh;
+    }
+
+    .title-div span{
+        font-size: 2.4vh;
+    }
+
+    .moon-container-navlinks-and-some-description{
+        flex-direction: column;
+        height: 100%;
+        gap: 6vh;
+        margin-top: 0%;
+    }
+
+    .moon-img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moon-img-container img{
+        width: 32vh;
+    }
+
+    .navlinks-moon-description{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .nav-items{
+        gap: 2vh;
+    }
+
+    .secactive::after {
+        height: 0.3vh;
+    }
+
+    .nav-links a{
+        font-size: 2vh;
+    }
+
+    .navlinks-moon-description h1{
+        font-size: 8vh;
+        line-height: 10vh;
+    }
+
+    .navlinks-moon-description p{
+        font-size: 2vh;
+        width: 100%;
+        margin-bottom: 2%;
+        line-height: 2.5vh;
+    }
+
+    .avg-distance p, .avg-time p{
+        font-size: 1.7vh;
+        margin-bottom: 10%;
+    }
+
+    .avg-distance h5, .avg-time h5{
+        font-size: 2.8vh;
+    }
+
+    .hr{
+        width: 100%;
+        margin-top: 3%;
+        height: 0.3vh;
+        margin-bottom: 3%;
+    }
+
+    .avg-distance, .avg-time{
+        height: max-content;
+        width: max-content;
+    }
+
+    .avg-distance-time-parent{
+        padding-left: 12%;
+        width: 100%;
+        gap: 2vh;
+    }
+
+
+}
